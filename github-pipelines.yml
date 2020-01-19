@@ -1,0 +1,13 @@
+image: microsoft/dotnet:sdk
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - dotnetcore
+        script: 
+          - export PROJECT_NAME=ExerciseTestingBankAccountInfo/BankAccount.sln
+          - dotnet restore $PROJECT_NAME
+          - dotnet build $PROJECT_NAME
+          - dotnet test $PROJECT_NAME
+          - dotnet pack $PROJECT_NAME
