@@ -16,4 +16,4 @@ jobs:
     - name: Build with dotnet
       run: dotnet build BankAccount --configuration Release
     - name: Test
-      run: dotnet test BankAccount.Tests
+      run: dotnet test BankAccount
